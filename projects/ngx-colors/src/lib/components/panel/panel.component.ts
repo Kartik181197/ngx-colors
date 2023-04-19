@@ -388,11 +388,11 @@ export class PanelComponent implements OnInit {
   public emitClose(status: "cancel" | "accept") {
     if (this.menu == 3) {
       if (status == "cancel") {
+        this.triggerInstance.closePanel();
       } else if (status == "accept") {
         this.setColor(this.temporalColor);
       }
     }
-    this.triggerInstance.closePanel();
   }
 
   public onClickBack() {
